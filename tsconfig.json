@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2022", // O ajusta según la versión de ECMAScript que prefieras
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // O la carpeta que prefieras para los archivos transpilados
+    "rootDir": "./src", // O la carpeta que contiene tus archivos fuente TypeScript
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.ts" // Ajusta según la estructura de tu proyecto
+  ],
+  "exclude": [
+    "node_modules",
+    "dist" // Ajusta si tienes una carpeta de salida diferente
+  ]
+}

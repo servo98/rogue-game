@@ -1,0 +1,48 @@
+{
+  "name": "rogue-game",
+  "version": "0.0.1",
+  "description": "game with ts and phaser",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run server",
+    "build": "rm -Rf dist && webpack --mode production --config webpack-prod.config.js",
+    "server": "npx http-server dist -c-1 --cors -o --gzip true",
+    "dev": "webpack serve --mode development --config webpack-dev.config.js",
+    "lint-and-format": "npm run lint && npm run format",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prepare": "husky install",
+    "test": "echo \"Ok: no test specified\" && exit 0",
+    "release": "standard-version --no-verify",
+    "postinstall": "git config --global push.default current && echo 'Git default branch configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/servo98/rogue-game.git"
+  },
+  "keywords": [
+    "ts",
+    "phaser",
+    "game",
+    "js"
+  ],
+  "author": "ferservo98",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/servo98/rogue-game/issues"
+  },
+  "homepage": "https://github.com/servo98/rogue-game#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
